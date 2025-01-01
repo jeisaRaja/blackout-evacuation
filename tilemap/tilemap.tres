@@ -1,12 +1,6 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b1aet1e15b3d0"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b1aet1e15b3d0"]
 
 [ext_resource type="Texture2D" uid="uid://byermj1hxcwwr" path="res://arts/tilemap.png" id="1_bbkse"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_13lq7"]
-polygon = PackedVector2Array(-3.2, 8, -1.6, 8, -1.6, -6.4, -3.2, -6.4)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_an7pe"]
-polygon = PackedVector2Array(-3.2, -8, -1.6, -8, -1.6, 6.4, -3.2, 6.4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c5kea"]
 texture = ExtResource("1_bbkse")
@@ -26,7 +20,6 @@ texture = ExtResource("1_bbkse")
 11:4/0/modulate = Color(0.500794, 0.654383, 0.710607, 1)
 2:5/0 = 0
 2:5/0/modulate = Color(0.443534, 0.599553, 0.654262, 1)
-2:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_13lq7")
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:5/0 = 0
 3:5/0/modulate = Color(0.443534, 0.599553, 0.654262, 1)
@@ -41,7 +34,6 @@ texture = ExtResource("1_bbkse")
 11:5/0/modulate = Color(0.500794, 0.654383, 0.710607, 1)
 2:6/0 = 0
 2:6/0/modulate = Color(0.443534, 0.599553, 0.654262, 1)
-2:6/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_an7pe")
 2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:6/0 = 0
 3:6/0/modulate = Color(0.443534, 0.599553, 0.654262, 1)
@@ -124,6 +116,15 @@ texture = ExtResource("1_bbkse")
 6:6/0/modulate = Color(0.500794, 0.654383, 0.710607, 1)
 6:7/0 = 0
 6:7/0/modulate = Color(0.500794, 0.654383, 0.710607, 1)
+5:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+8:10/0 = 0
+7:10/0 = 0
+9:10/0 = 0
+10:9/0 = 0
+10:10/0 = 0
+11:10/0 = 0
 
 [resource]
 occlusion_layer_0/light_mask = 1

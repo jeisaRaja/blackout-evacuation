@@ -1,2 +1,4 @@
 class_name Equippable
-extends Node
+extends Pickupable
+
+var is_equipped := false

@@ -1,0 +1,2 @@
+class_name HandPosition
+extends Marker2D

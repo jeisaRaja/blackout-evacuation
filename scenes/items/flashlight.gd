@@ -1,7 +1,8 @@
 class_name Flashlight
-extends PointLight2D
+extends Node2D
 
 @export var battery: Battery
+@onready var toggleable = $Toggleable as Toggleable
 
 
 func _ready():

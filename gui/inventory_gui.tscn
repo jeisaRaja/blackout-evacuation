@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr4enrjspubv"]
+
+[ext_resource type="Script" path="res://gui/inventory_gui.gd" id="1_eb8kx"]
+[ext_resource type="PackedScene" uid="uid://cah6m7ibak82q" path="res://gui/slot.tscn" id="2_gbluk"]
+
+[node name="InventoryGUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_eb8kx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 135.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -16.0
+offset_right = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/h_separation = 0
+columns = 3
+
+[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_gbluk")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_gbluk")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_gbluk")]
+layout_mode = 2

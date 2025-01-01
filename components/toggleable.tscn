@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjkq25bwe3p7g"]
+
+[ext_resource type="Script" path="res://components/toggleable.gd" id="1_knam7"]
+
+[node name="Toggleable" type="Node"]
+script = ExtResource("1_knam7")
