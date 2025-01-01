@@ -41,7 +41,7 @@ func _physics_process(delta):
 				break
 
 		if leg_sprite_target_rotation != null:
-			current_rotation = lerp_angle(current_rotation, leg_sprite_target_rotation, 0.1)
+			current_rotation = lerp_angle(current_rotation, leg_sprite_target_rotation, 0.4)
 			parent.legs_sprite.rotation = current_rotation
 
 	if not animation_player:

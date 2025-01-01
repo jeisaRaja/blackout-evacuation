@@ -27,4 +27,4 @@ tile_map_data = PackedByteArray("AAAOAAkAAAADAAoAAAAOAAoAAAADAAkAAAAPAAkAAAACAAo
 tile_set = ExtResource("3_0r0xo")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.10524, 0.10524, 0.10524, 1)
+color = Color(0.0475576, 0.0475577, 0.0475576, 1)

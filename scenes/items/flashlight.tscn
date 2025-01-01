@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://3m5pqfvjh5qp"]
+
+[ext_resource type="Texture2D" uid="uid://gc3em01fxyup" path="res://arts/flashlight_texture.png" id="1_opihh"]
+[ext_resource type="Script" path="res://scenes/items/flashlight.gd" id="2_k1o68"]
+[ext_resource type="Script" path="res://components/equippable.gd" id="3_8v316"]
+
+[node name="Flashlight" type="PointLight2D"]
+position = Vector2(13, 11)
+energy = 0.7
+shadow_enabled = true
+texture = ExtResource("1_opihh")
+offset = Vector2(53, 0)
+script = ExtResource("2_k1o68")
+
+[node name="Equippable" type="Node" parent="."]
+script = ExtResource("3_8v316")
