@@ -3,7 +3,6 @@ extends Node2D
 
 @onready var body_sprite = $Body as Sprite2D
 @onready var legs_sprite = $Legs as Sprite2D
-@export var inventory: Inventory
 
 
 func _ready():

@@ -9,6 +9,7 @@
 [node name="TestScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_w8pej")]
+z_index = 1
 position = Vector2(180, 160)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -40,5 +41,7 @@ offset_right = 192.0
 offset_bottom = 192.0
 
 [node name="Flashlight" parent="." instance=ExtResource("5_5jp0q")]
-visible = false
 position = Vector2(264, 152)
+
+[node name="Flashlight2" parent="." instance=ExtResource("5_5jp0q")]
+position = Vector2(256, 152)

@@ -14,13 +14,18 @@ config/name="blackout-evacuation"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Main="*res://globals/main.gd"
+
 [display]
 
 window/size/viewport_width=480
 window/size/viewport_height=250
-window/size/window_width_override=800
-window/size/window_height_override=600
+window/size/window_width_override=1000
+window/size/window_height_override=800
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://arts/cursor.png"
 
 [input]
 

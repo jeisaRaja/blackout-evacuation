@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://3m5pqfvjh5qp"]
+[gd_scene load_steps=7 format=3 uid="uid://3m5pqfvjh5qp"]
 
 [ext_resource type="Texture2D" uid="uid://gc3em01fxyup" path="res://arts/flashlight_texture.png" id="1_opihh"]
+[ext_resource type="Resource" uid="uid://dwhfoo6qxxjt7" path="res://scenes/items/flashlight.tres" id="2_4br27"]
 [ext_resource type="Script" path="res://scenes/items/flashlight.gd" id="2_k1o68"]
 [ext_resource type="Script" path="res://components/toggleable.gd" id="4_nj8f3"]
 [ext_resource type="Texture2D" uid="uid://2uqgkyg3trrr" path="res://arts/flashlight.png" id="4_qh4bo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_urte0"]
-radius = 6.0
+radius = 8.0
 
 [node name="Flashlight" type="Node2D"]
 script = ExtResource("2_k1o68")
@@ -20,6 +21,7 @@ texture = ExtResource("1_opihh")
 offset = Vector2(64, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
 rotation = 1.57079
 texture = ExtResource("4_qh4bo")
 
@@ -27,6 +29,7 @@ texture = ExtResource("4_qh4bo")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("4_nj8f3")
+item_resource = ExtResource("2_4br27")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Toggleable"]
 shape = SubResource("CircleShape2D_urte0")

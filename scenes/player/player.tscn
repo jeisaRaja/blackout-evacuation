@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgmbqbc17bgfc"]
+[gd_scene load_steps=18 format=3 uid="uid://dgmbqbc17bgfc"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_5i256"]
 [ext_resource type="Texture2D" uid="uid://c8spn7mww56bi" path="res://arts/player_janitor.png" id="1_l5121"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://components/player_input.gd" id="4_kb5is"]
 [ext_resource type="Script" path="res://components/hand.gd" id="5_xkfiy"]
 [ext_resource type="PackedScene" uid="uid://dwy5dgkv0yebl" path="res://components/item_interaction.tscn" id="6_klrhj"]
+[ext_resource type="Script" path="res://components/item_awareness.gd" id="9_wp6vf"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1iyv2"]
 polygon = PackedVector2Array(-8, -9, -8, 8, -6, 11, -2, 13, 3, 11, 5, 8, 5, 3, 5, -9, 1, -12, -2, -12, -5, -11)
@@ -65,10 +66,12 @@ _data = {
 "walk": SubResource("Animation_x2nyy")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_seoom"]
+radius = 100.0
+
 [node name="Player" type="CharacterBody2D"]
 modulate = Color(0.691357, 0.691357, 0.691357, 1)
 script = ExtResource("1_5i256")
-inventory = ExtResource("2_xprvt")
 
 [node name="Legs" type="Sprite2D" parent="."]
 position = Vector2(-2, 0)
@@ -88,7 +91,9 @@ position = Vector2(9.00004, 9.99997)
 rotation = -1.5708
 script = ExtResource("5_xkfiy")
 
-[node name="ItemInteraction" parent="Body" instance=ExtResource("6_klrhj")]
+[node name="ItemInteraction" parent="Body" node_paths=PackedStringArray("input") instance=ExtResource("6_klrhj")]
+input = NodePath("../../PlayerInput")
+inventory = ExtResource("2_xprvt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0yb72")
@@ -114,3 +119,10 @@ texture_scale = 6.0
 libraries = {
 "": SubResource("AnimationLibrary_m7f0y")
 }
+
+[node name="ItemAwarness" type="Area2D" parent="."]
+visible = false
+script = ExtResource("9_wp6vf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemAwarness"]
+shape = SubResource("CircleShape2D_seoom")

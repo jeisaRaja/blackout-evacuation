@@ -6,6 +6,7 @@ extends Control
 
 func _ready():
 	update()
+	inventory.updated.connect(update)
 
 
 func update():
