@@ -3,6 +3,7 @@ extends Resource
 
 signal updated
 @export var items: Array[InventoryItem] = []
+@export var item_on_hand: InventoryItem
 
 
 func insert(item: InventoryItem):

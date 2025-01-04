@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dwhfoo6qxxjt7"]
 
 [ext_resource type="Script" path="res://resources/inventory_item.gd" id="1_jqt0m"]
-[ext_resource type="Texture2D" uid="uid://2uqgkyg3trrr" path="res://arts/flashlight.png" id="2_56uxj"]
+[ext_resource type="Texture2D" uid="uid://qk8nwr5212d6" path="res://arts/flashlight-icon.png" id="2_7vhgc"]
 
 [resource]
 script = ExtResource("1_jqt0m")
 name = "flashlight"
-texture = ExtResource("2_56uxj")
+texture = ExtResource("2_7vhgc")
