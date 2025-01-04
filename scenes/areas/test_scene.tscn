@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://dr2th83rfwlnv"]
+[gd_scene load_steps=7 format=4 uid="uid://dr2th83rfwlnv"]
 
 [ext_resource type="PackedScene" uid="uid://dgmbqbc17bgfc" path="res://scenes/player/player.tscn" id="1_w8pej"]
 [ext_resource type="Texture2D" uid="uid://c8spn7mww56bi" path="res://arts/player_janitor.png" id="2_q5yak"]
 [ext_resource type="TileSet" uid="uid://b1aet1e15b3d0" path="res://tilemap/tilemap.tres" id="3_0r0xo"]
 [ext_resource type="PackedScene" uid="uid://cr4enrjspubv" path="res://gui/inventory_gui.tscn" id="4_ifiol"]
 [ext_resource type="PackedScene" uid="uid://3m5pqfvjh5qp" path="res://scenes/items/flashlight.tscn" id="5_5jp0q"]
+[ext_resource type="PackedScene" uid="uid://dduvjgw68xi44" path="res://scenes/items/battery.tscn" id="6_f2o74"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -45,3 +46,6 @@ position = Vector2(264, 152)
 
 [node name="Flashlight2" parent="." instance=ExtResource("5_5jp0q")]
 position = Vector2(256, 152)
+
+[node name="Battery" parent="." instance=ExtResource("6_f2o74")]
+position = Vector2(216, 176)

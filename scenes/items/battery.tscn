@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dduvjgw68xi44"]
+[gd_scene load_steps=6 format=3 uid="uid://dduvjgw68xi44"]
 
 [ext_resource type="Script" path="res://scenes/items/battery.gd" id="1_bcip5"]
+[ext_resource type="Texture2D" uid="uid://cgsj5lc83fgan" path="res://arts/battery.png" id="2_pitc6"]
+[ext_resource type="PackedScene" uid="uid://jcernhkvvtk3" path="res://components/pickupable.tscn" id="3_hdhwf"]
+[ext_resource type="Resource" uid="uid://c856d27eanmnx" path="res://scenes/items/battery.tres" id="4_7wku1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_217v0"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ap20e"]
 
-[node name="Battery" type="Area2D"]
+[node name="Battery" type="Node2D"]
 script = ExtResource("1_bcip5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pitc6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_217v0")
+[node name="Pickupable" parent="." instance=ExtResource("3_hdhwf")]
+item_resource = ExtResource("4_7wku1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickupable"]
+shape = SubResource("CircleShape2D_ap20e")

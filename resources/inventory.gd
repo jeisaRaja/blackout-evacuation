@@ -7,6 +7,7 @@ signal updated
 
 
 func insert(item: InventoryItem):
+	print(item)
 	for i in range(items.size()):
 		if not items[i]:
 			items[i] = item

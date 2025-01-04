@@ -22,17 +22,18 @@ func _ready():
 func _physics_process(_delta):
 	is_mouse_hovering = hovered_objects.size() != 0
 	if !is_mouse_active or !is_mouse_hovering:
-		Input.set_custom_mouse_cursor(Main.default_cursor)
+		Input.set_custom_mouse_cursor(Main.default_cursor, Input.CURSOR_ARROW, Vector2(16, 16))
+		Input.set_custom_mouse_cursor(null)
 		return
 
-	# Change cursor style
 	if hover_type == HoverEnum.ITEM:
-		Input.set_custom_mouse_cursor(Main.item_hover_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+		Input.set_custom_mouse_cursor(Main.item_hover_cursor, Input.CURSOR_ARROW, Vector2(16, 16))
 	if hover_type == HoverEnum.READ:
-		Input.set_custom_mouse_cursor(Main.read_hover_cursor, Input.CURSOR_ARROW)
+		Input.set_custom_mouse_cursor(Main.read_hover_cursor, Input.CURSOR_ARROW, Vector2(16, 16))
 
 	if input.left_click:
 		var selected_item = hovered_objects.pop_back()
+		print(selected_item)
 		if selected_item is Pickupable:
 			selected_item.pickup(inventory)
 

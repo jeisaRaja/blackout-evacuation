@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jcernhkvvtk3"]
+
+[ext_resource type="Script" path="res://components/pickupable.gd" id="1_expjp"]
+
+[node name="Pickupable" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_expjp")
