@@ -21,5 +21,4 @@ func _mouse_exit():
 
 
 func pickup(inventory: Inventory):
-	inventory.insert(item_resource)
-	get_parent().queue_free()
+	inventory.insert(self)

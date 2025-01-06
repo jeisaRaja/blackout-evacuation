@@ -5,12 +5,15 @@ extends Button
 @onready var item_sprite := %Item as Sprite2D
 var item_resource: InventoryItem
 var is_follow_cursor := false
+var index: int
+
 
 func _process(_delta):
 	if is_hovered():
 		modulate = Color(0.8, 0.8, 0.8)
 	else:
 		modulate = Color(1, 1, 1)
+
 
 func _physics_process(_delta):
 	if is_follow_cursor:
@@ -32,7 +35,6 @@ func take_item() -> InventoryItem:
 	var item = item_resource
 	item_resource = null
 
-	print("item resource should be empty")
 	return item
 
 

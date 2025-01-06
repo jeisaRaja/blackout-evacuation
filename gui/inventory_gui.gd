@@ -29,22 +29,22 @@ func connect_slots():
 
 func update():
 	for i in range(min(inventory.items.size(), slots.size())):
-		print("adding item: ", inventory.items[i])
 		slots[i].insert(inventory.items[i])
 
 
 func _on_slot_pressed(slot: Slot):
-	if !hold_slot.item_resource:
+	if !hold_slot.item_resource:  # Picking up an item
 		if slot.item_resource:
-			hold_slot.insert(slot.take_item())
+			hold_slot.insert(inventory.remove(slot.index))
 			hold_slot.follow_cursor()
-	else:
+	else:  # Dropping or swapping an item
 		if slot.item_resource:
 			var tmp_item = slot.take_item()
-			slot.insert(hold_slot.item_resource)
+			slot.insert(hold_slot.take_item())
+			inventory.insert_into(slot.index, slot.item_resource)
 			hold_slot.insert(tmp_item)
 			hold_slot.follow_cursor()
 		else:
 			slot.insert(hold_slot.take_item())
-			hold_slot.insert(null)
-			hold_slot.hide_slot()
+			inventory.insert_into(slot.index, slot.item_resource)
+			hold_slot.hide_slot()  # Hides after dropping
