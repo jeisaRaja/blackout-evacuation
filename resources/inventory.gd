@@ -25,5 +25,6 @@ func remove(index: int) -> InventoryItem:
 
 
 func insert_into(index, item: InventoryItem):
-	items[index].item_resource = item
+	print(index, item)
+	items[index] = item
 	updated.emit()
